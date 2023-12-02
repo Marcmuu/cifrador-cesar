@@ -52,9 +52,11 @@ h1 {
 #resultado {
     height: 20px;
     color: #5af78d;
-    padding: 0 10px 10px;
+    padding: 0 0 10px 10px;
     border-bottom-left-radius: var(--borde-redondo);
     border-bottom-right-radius: var(--borde-redondo);
+    overflow: auto; /* Agrega un scroll si el contenido es demasiado grande */
+    max-height: 200px; /* Altura máxima del contenedor */
 }
 
 #input-original-des, #resultado-des {
@@ -76,6 +78,8 @@ h1 {
     padding: 0 10px 10px;
     border-bottom-left-radius: var(--borde-redondo);
     border-bottom-right-radius: var(--borde-redondo);
+    overflow: auto; /* Agrega un scroll si el contenido es demasiado grande */
+    max-height: 200px; /* Altura máxima del contenedor */
 }
 
 .rango {

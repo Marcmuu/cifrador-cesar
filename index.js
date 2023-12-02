@@ -2,10 +2,12 @@ const alfabeto = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","Ñ","
 const inputOriginal = document.getElementById('input-original');
 const cifrador = document.getElementById('cifrador');
 const resultado = document.getElementById('resultado');
+const resultadodes = document.getElementById('resultado-des');
 const rango = document.getElementById('rango');
 
 // const textoCodificado = document.getElementById('textoCodificado');
 const botonCopiar = document.getElementById('botonCopiar');
+const botonCopiardes = document.getElementById('botonCopiar-des');
 
 const shifMessage = () => {
     const wordArray = [...inputOriginal.value.toUpperCase()];
@@ -31,12 +33,18 @@ const printChar = (currentLetterIndex, wordArray) => {
 botonCopiar.addEventListener('click', () => {
     const textoACopiar = resultado.innerText;
     navigator.clipboard.writeText(textoACopiar)
-    .then(() => {
-        alert('Texto copiado al portapapeles');
-    })
-    .catch(err => {
-        console.error('Error al intentar copiar el texto: ', err);
-    });
+    // .then(() => {
+    //     alert('Texto copiado al portapapeles');
+    // })
+    // .catch(err => {
+    //     console.error('Error al intentar copiar el texto: ', err);
+    // });
+});
+
+// Agregar funcionalidad de copiado al botón
+botonCopiardes.addEventListener('click', () => {
+    const textoACopiar = resultadodes.innerText;
+    navigator.clipboard.writeText(textoACopiar)
 });
 
 const animateChar = spanChar => {

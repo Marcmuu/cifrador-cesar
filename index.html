@@ -11,12 +11,13 @@
 <body>
     <main>
         <h1>Cifrador César</h1>
-        <form id="cifrador" autocomplete="off">
+        <form id="cifrador" autocomplete="off" style="display: flex; flex-direction: column;">
+            <button id="botonCopiar" style="display: flex; width: 15%; justify-content: center; align-self: flex-end;">Copiar</button>
             <input id="input-original" spellcheck="false" placeholder="Ingrese el texto" type="text" name="text">
         </form>
         <div style="position: relative;">
             <div id="resultado"></div>
-            <button id="botonCopiar" style="position: absolute; right: 0;">Copiar</button>
+            
         </div>
         <div class="rango">
             <input id="rango" type="range" value="10" min="1" max="20" oninput="this.nextElementSibling.value = this.value">
@@ -25,8 +26,9 @@
     </main>
     <main>
         <h1>Descifrador César</h1>
-        <form id="descifrador" autocomplete="off">
-            <input id="input-original-des" spellcheck="false" placeholder="Ingrese el texto" type="text" name="text">
+        <form id="descifrador" autocomplete="off" style="display: flex; flex-direction: column;">
+            <button id="botonCopiar-des" style="display: flex; width: 15%; justify-content: center; align-self: flex-end;">Copiar</button>
+            <input id="input-original-des" spellcheck="false" placeholder="Ingrese el texto cifrado" type="text" name="text">
         </form>
         <div id="resultado-des"></div>
         <div class="rango">
