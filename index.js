@@ -71,8 +71,8 @@ const printCharDes = (currentLetterIndex, wordArray) => {
         .then( () => {
             const charSinCodificar = wordArray[currentLetterIndex];
             spanChar.innerHTML = alfabeto.includes(charSinCodificar) ? 
-                alfabeto[(alfabeto.indexOf(charSinCodificar) + (27 - parseInt(rangoDes.value))) % alfabeto.length] : 
-                charSinCodificar;
+            alfabeto[(alfabeto.indexOf(charSinCodificar) - parseInt(rangoDes.value) + alfabeto.length) % alfabeto.length] : 
+            charSinCodificar;
             printCharDes(currentLetterIndex + 1, wordArray);
         });
 };
